@@ -1,12 +1,14 @@
 'use strict';
 
-const { app } = require('../src/server');
+const { app } = require('../src/auth/server');
 const supertest = require('supertest');
 const { sequelizeDatabase } = require('../src/auth/models');
 const request = supertest(app);
 
 beforeAll(async () => {
+  console.log(sequelizeDatabase);
   await sequelizeDatabase.sync();
+ 
 });
 
 afterAll(async () => {
