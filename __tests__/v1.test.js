@@ -17,31 +17,31 @@ afterAll(async () => {
 });
 
 describe('v1 routes', () => {
-  it('creates a food item', async () => {
-    let response = await request.post('/api/v1/food').send({
-      name: 'testFood',
+  it('creates a books item', async () => {
+    let response = await request.post('/api/v1/books').send({
+      name: 'testbooks',
       calories: 100,
       type: 'protein',
     });
     expect(response.status).toEqual(201);
-    expect(response.body.name).toEqual('testFood');
+    expect(response.body.name).toEqual('testbooks');
   });
 
-  it('gets all food items', async () => {
-    let response = await request.get('/api/v1/food');
+  it('gets all books items', async () => {
+    let response = await request.get('/api/v1/books');
     expect(response.status).toEqual(200);
-    expect(response.body[0].name).toEqual('testFood');
+    expect(response.body[0].name).toEqual('testbooks');
   },
   );
 
-  it('updates a food item', async () => {
-    let response = await request.put('/api/v1/food/1').send({
-      name: 'testFood',
+  it('updates a books item', async () => {
+    let response = await request.put('/api/v1/books/1').send({
+      name: 'testbooks',
       calories: 100,
       type: 'protein',
     });
     expect(response.status).toEqual(200);
-    expect(response.body.name).toEqual('testFood');
+    expect(response.body.name).toEqual('testbooks');
   },
   );
 

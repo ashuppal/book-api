@@ -1,7 +1,7 @@
 {
   "name": "auth-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Access Control (ACL) This is a simple access control list (ACL) for Node.js. It is designed to be used with Express.js, but can be used with any other framework or without a framework at all.",
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test jest --verbose --coverage",
@@ -32,5 +32,6 @@
     "sequelize-cli": "^6.6.0",
     "sqlite3": "^5.1.4",
     "supertest": "^6.3.3"
-  }
+  },
+  "devDependencies": {}
 }
