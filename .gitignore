@@ -66,7 +66,7 @@ build/Release
 node_modules/
 jspm_packages/
 
-# Typescript v1 declaration files
+# Typescript handlers declaration files
 typings/
 
 # Optional npm cache directory
@@ -99,9 +99,9 @@ Icon
 ._*
 
 # Files that might appear in the root of a volume
-.DocumentRevisions-V100
+.DocumentRevisions-handlers00
 .fseventsd
-.Spotlight-V100
+.Spotlight-handlers00
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
