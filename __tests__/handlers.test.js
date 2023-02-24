@@ -16,29 +16,29 @@ afterAll(async () => {
   await db.drop();
 });
 
-describe('v1 routes', () => {
+describe('handlers routes', () => {
   it('creates a books item', async () => {
-    let response = await request.post('/api/v1/books').send({
+    let response = await request.post('/api/handlers/books').send({
       name: 'testbooks',
-      calories: 100,
-      type: 'protein',
+      category:'fiction',
+      author: 'smith',
     });
     expect(response.status).toEqual(201);
     expect(response.body.name).toEqual('testbooks');
   });
 
   it('gets all books items', async () => {
-    let response = await request.get('/api/v1/books');
+    let response = await request.get('/api/handlers/books');
     expect(response.status).toEqual(200);
     expect(response.body[0].name).toEqual('testbooks');
   },
   );
 
   it('updates a books item', async () => {
-    let response = await request.put('/api/v1/books/1').send({
+    let response = await request.put('/api/handlers/books/1').send({
       name: 'testbooks',
-      calories: 100,
-      type: 'protein',
+      category:'fiction',
+      author: 'smith',
     });
     expect(response.status).toEqual(200);
     expect(response.body.name).toEqual('testbooks');

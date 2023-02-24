@@ -8,7 +8,7 @@ const errorHandler = require('./error-handlers/500.js');
 
 const logger = require('./middleware/logger.js');
 
-const v1Routes = require('../routes/v1.js');
+const handlersRoutes = require('../routes/handlers.js');
 
 
 const authRoutes = require('../auth/routes');
@@ -22,8 +22,8 @@ app.use(logger);
 app.use(authRoutes);
 
 // assuming you are on port 3001:
-// http://localhost:3001/api/v1/books
-app.use('/api/v1', v1Routes);
+// http://localhost:3001/api/handlers/books
+app.use('/api/handlers', handlersRoutes);
 
 
 app.use('*', notFoundHandler);
