@@ -34,7 +34,7 @@ tests are located in the __tests__ folder.
 
 ## UML:
 
-![UML](./assets/UML.png)
+![UML](./assets/Lab9UML.png)
 
 ## Collaborators:
 
