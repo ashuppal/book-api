@@ -20,6 +20,7 @@ const coffee = coffeeModel(sequelizeDatabase, DataTypes);
 const readers = userModel(sequelizeDatabase, DataTypes);
 
 readers.hasMany(books);
+books.belongsTo(readers);
 
 module.exports = {
   db: sequelizeDatabase,
