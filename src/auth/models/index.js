@@ -17,12 +17,14 @@ const DATABASE_URL = process.env.NODE_ENV === 'test'
 const sequelizeDatabase = new Sequelize(DATABASE_URL);
 const books = booksModel(sequelizeDatabase, DataTypes);
 const coffee = coffeeModel(sequelizeDatabase, DataTypes);
+const readers = userModel(sequelizeDatabase, DataTypes);
 
+readers.hasMany(books);
+books.belongsTo(readers);
 
 module.exports = {
   db: sequelizeDatabase,
   books: new Collection(books),
   coffee: new Collection(coffee),
-
-  readers:userModel(sequelizeDatabase, DataTypes),
+  readers,
 };
